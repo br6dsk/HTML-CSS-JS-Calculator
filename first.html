@@ -1,0 +1,80 @@
+<DOCTYPE html>
+    <meta charset="utf-8">
+    <head><title>Operações</title> 
+    <style>
+        body{
+            background-color: #ccc;
+            
+        }
+        input {
+            width: 75px;
+            flex-direction: column;  
+        }
+        button{
+            width: 100px;
+        }
+    
+    </style>
+    </head>
+    <body>
+        
+        <table>     
+            <tr>
+                <td><input id="input_1" type="number"/><span> +</span></td>
+                <td><input id="input_2" type="number"/></td>
+                <td><button onclick="soma()"><b>Somar</b></button> <b> = </b></td>
+                <td><b id='soma'></b></td>
+            </tr>
+
+            <tr>
+                <td><input id="input_3" type="number"/><span> -</span></td>
+                <td><input id="input_4" type="number"/></td>
+                <td><button onclick="sub()"><b>Subtrair</b></button> <b> = </b></td>
+                <td><b id='sub'></b></td>
+            </tr>
+
+            <tr>
+                <td><input id="input_5" type="number"/><span> *</span></td>
+                <td><input id="input_6" type="number"/></td>
+                <td><button onclick="mult()"><b>Multiplicar</b></button> <b> = </b></td>
+                <td><b id='mult'></b></td>
+            </tr>
+
+            <tr>
+                <td><input id="input_7" type="number"/><span> /</span></td>
+                <td><input id="input_8" type="number"/></td>
+                <td><button onclick="div()"><b>Dividir</b></button> <b> = </b></td>
+                <td><b id='div'></b></td>
+            </tr>
+        </table>
+            <script>
+                function soma(){
+                    var num1 = parseInt(document.getElementById("input_1").value)
+                    var num2 = parseInt(document.getElementById("input_2").value)
+                    var calculo = num1 + num2
+                    document.getElementById('soma').innerHTML = calculo;                                              
+                } 
+                function sub(){
+                    var num1 = parseInt(document.getElementById("input_3").value)
+                    var num2 = parseInt(document.getElementById("input_4").value)
+                    var calculo = num1 - num2
+                    document.getElementById('sub').innerHTML = calculo;                                               
+                } 
+                function mult(){
+                    var num1 = parseInt(document.getElementById("input_5").value)
+                    var num2 = parseInt(document.getElementById("input_6").value)
+                    var calculo = num1 * num2
+                    document.getElementById('mult').innerHTML = calculo;                                               
+                } 
+                function div(){
+                    var num1 = parseInt(document.getElementById("input_7").value)
+                    var num2 = parseInt(document.getElementById("input_8").value)
+                    var calculo = num1 / num2
+                    document.getElementById('div').innerHTML = calculo;                                       
+                } 
+                
+            </script>
+        
+
+    </body>
+</DOCTYPE html>
